@@ -1,10 +1,13 @@
-import Navbar from "./ui/dashboard/Navbar";
+import Information from "./ui/dashboard/Information"
+import Footer from "./ui/dashboard/Footer"
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    <h1>Hola</h1>
+    <main className="lg:flex flex-col justify-center items-center text-center p-5">
+    <Information />
+    <Footer />
+    </main>
     </>
   )
 }

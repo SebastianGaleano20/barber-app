@@ -3,7 +3,7 @@
 
 ### Task List
 ## Front-End task
-- [] Create layout of home page
+- [] Create navbar of home page
    - [] Service button
    - [] Images
    - [] Information
