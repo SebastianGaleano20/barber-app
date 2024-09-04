@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <section>
+    <section className="flex flex-col justify-center content-between items-center text-center p-5">
       <article>
         <h2>CORTES UNISEX / NIÑOS</h2>
         <p>Clásico o moderno. Marcamos tendencia combinando máquinas y tijeras.</p>
