@@ -3,7 +3,7 @@ import Services from "./ui/dashboard/Services"
 export default function Home() {
   return (
     <>
-    <main className="lg:flex flex-col items-center text-center">
+    <main className="text-center">
     <Header />
     <Services />
     </main>
