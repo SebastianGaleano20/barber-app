@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "@/app/ui/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Barlow({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Barrio fino",
