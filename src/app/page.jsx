@@ -5,7 +5,7 @@ import Footer from "./ui/dashboard/Footer"
 export default function Home() {
   return (
     <>
-      <main className="text-center">
+      <main>
         <Header />
         <Services />
         <Footer />
