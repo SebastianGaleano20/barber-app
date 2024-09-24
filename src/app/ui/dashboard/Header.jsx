@@ -1,9 +1,9 @@
-import styles from '@/app/styles/background.module.css'
+
 import Image from 'next/image'
 
 export default function Header() {
   return (
-    <div className={styles.backgroundImage}>
+    <div>
       <section className="grid justify-items-center content-center items-center text-center h-5/6 w-screen">
           <Image
            src="/logo.jpeg"
