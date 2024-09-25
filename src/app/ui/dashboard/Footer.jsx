@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
 <footer>
-    <section className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <section className="w-full mt-2 max-w-screen-xl mx-auto p-4 md:py-8">
         <article className="sm:flex sm:items-center sm:justify-between">
             <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/logo.jpeg" className="h-8" alt="Logobarber" />

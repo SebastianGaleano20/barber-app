@@ -4,7 +4,7 @@ import Footer from "./ui/dashboard/Footer"
 import ImageGallery from "./ui/dashboard/ImageGallery"
 import Location from "./ui/dashboard/Location"
 import Hours from "./ui/dashboard/Hours"
-
+import Contact from "./ui/dashboard/Contac"
 export default function Home() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function Home() {
         <Hours />
         <Services />
         <Location />
+        <Contact />
       </main>
         <Footer />
     </>
