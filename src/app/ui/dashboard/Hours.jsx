@@ -1,6 +1,6 @@
-export default function Contact() {
+export default function Hours() {
     return (
-        <section className="card  w-96">
+        <section className="card bg-slate-600 ring-2 ring-slate-800 p-6 rounded-lg w-11/12">
                 <h2 className="text-3xl font-bold text-center mb-4">Horarios</h2>
                 <ul className="timeline timeline-vertical lg:timeline-horizontal">
                     <li>

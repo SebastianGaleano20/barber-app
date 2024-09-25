@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <div>
-      <section className="grid justify-items-center content-center items-center text-center h-5/6 w-screen">
+      <section className="grid p-4 justify-items-center content-center items-center text-center h-5/6 w-96">
           <Image
            src="/logo.jpeg"
            width={300}
