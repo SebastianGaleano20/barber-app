@@ -8,7 +8,8 @@ import Contact from "./ui/dashboard/Contac"
 export default function Home() {
   return (
     <>
-      <main className="w-full flex flex-col justify-center items-center gap-4">
+      <main 
+      className="w-full flex flex-col justify-center items-center gap-4">
         <Header />
         <ImageGallery />
         <Hours />

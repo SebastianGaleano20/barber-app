@@ -34,10 +34,10 @@ export default function ImageGallery() {
 
       <section className="carousel carousel-center rounded-box lg:flex hidden overflow-hidden">
         <article className="carousel-item">
-          <img src="/corte9.jpeg" className="w-96" alt="Corte de pelo" />
+          <img src="/local.jpeg" className="w-96" alt="Corte de pelo" />
         </article>
         <article className="carousel-item">
-          <img src="/corte7.jpeg" className="w-96" alt="Corte de pelo" />
+          <img src="/corte9.jpeg" className="w-96" alt="Corte de pelo" />
         </article>
         <article className="carousel-item">
           <img src="/corte3.jpeg" className="w-96" alt="Corte de pelo" />
