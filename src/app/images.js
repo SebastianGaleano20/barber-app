@@ -1,4 +1,4 @@
-export const Images = [
+export const IMAGES = [
   {
     "image": "/corte1.jpeg",
     "alt": "Corte de pelo"

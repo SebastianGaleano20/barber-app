@@ -1,12 +1,12 @@
 'use client'
-import { Images } from "../../images.js"
+import { IMAGES } from "../../images.js"
 import { useState, useEffect } from "react";
 
 export default function ImageGallery() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    setImages(Images);
+    setImages(IMAGES);
   }, []);
   return (
     <>
@@ -21,10 +21,10 @@ export default function ImageGallery() {
               />
               <article className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                 <a
-                  href={`#slide${index === 0 ? Images.length : index}`}
+                  href={`#slide${index === 0 ? images.length : index}`}
                   className="btn btn-circle">❮</a>
                 <a
-                  href={`#slide${index === Images.length - 1 ? 1 : index + 2}`}
+                  href={`#slide${index === images.length - 1 ? 1 : index + 2}`}
                   className="btn btn-circle">❯</a>
               </article>
             </article >

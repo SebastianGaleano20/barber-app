@@ -1,29 +1,11 @@
-const SERVICES = [
-  {
-    id: 1,
-    imageURL: '/corte3.jpeg',
-    name: 'CORTES UNISEX / NIÑOS',
-    description: 'Clásico o moderno. Marcamos tendencia combinando máquinas y tijeras.'
-  },
-  {
-    id: 2,
-    name: 'CORTE + BARBA',
-    imageURL: 'corte1.jpeg',
-    description: 'Clásico o moderno más afeitada tradicional o recorte de barba.'
-  },
-  {
-    id: 3,
-    imageURL: '/corte2.jpeg',
-    name: 'COLORES',
-    description: 'Proceso de coloracion para cabello. Consultar gama de colores'
-  }]
+import { SERVICES } from "../../../services.js"
 
 export default function Services() {
   return (
-    < section className="flex flex-wrap justify-center gap-4 m-5">
+    < section className="flex flex-wrap justify-center gap-4 m-5 lg:grid-cols-3 lg:gap-8 lg:m-8">
       {
         SERVICES.map(service => (
-          <article className="p-5 max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={service.id}>
+          <article className="p-5 lg:max-w-sm  max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={service.id}>
             <img className="rounded-t-lg w-full" src={service.imageURL} alt="img" />
             <h2 className="text-2xl p-5">{service.name}</h2>
             <p className="mb-3 text-2lg font-normal text-gray-700 dark:text-gray-400">{service.description}</p>
