@@ -9,18 +9,15 @@ export default function Footer() {
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href="https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3" className="hover:underline me-4 md:me-6">Instagram</a>
+                    <a target="_blank" href="https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3" className="hover:underline me-4 md:me-6">Instagram</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Whatsapp</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Contacto</a>
+                    <a target="_blank" href="https://wa.me/+5491123835826?text=Hola-tengo-una-consulta" className="hover:underline me-4 md:me-6">Whatsapp</a>
                 </li>
             </ul>   
         </article>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://sebastiang.netlify.app/" className="hover:underline">DraCode</a>. All Rights Reserved.</span>
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a target="_blank" href="https://sebastiang.netlify.app/" className="hover:underline">DraCode</a>. All Rights Reserved.</span>
     </section>
 </footer>
   )

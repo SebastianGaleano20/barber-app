@@ -1,6 +1,6 @@
-export default function Navbar() {
+export default function Location() {
     return (
-        <section className="flex justify-center p-4">
+        <section className="flex justify-center p-4 lg">
             <article className="card glass max-w-md">
                 <figure>
                     <img

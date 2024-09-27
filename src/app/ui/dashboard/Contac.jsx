@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <section className="card bg-base-100 image-full max-w-md m-3 shadow-xl">
+        <section className="card bg-base-100 image-full max-w-md lg:w-lg m-3 shadow-xl">
             <figure>
                 <img
                     src="/ig.jpeg"
