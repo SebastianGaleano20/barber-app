@@ -10,13 +10,15 @@ export default function ImageGallery() {
   }, []);
   return (
     <>
-      <section className="carousel w-full lg:hidden">
+      <h2 className="text-3xl text-center font-bold m-4">Nuestros trabajos</h2>
+    <section className="m-4 p-5 max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:hidden">
+      <article className="carousel w-full">
         {
           images.map((image, index) => (
             <article key={index} id={`slide${index + 1}`} className="carousel-item relative w-full">
               <img
                 src={image.image}
-                className="max-w-md"
+                className="object-scale-down rounded-t-lg w-full"
                 alt={image.alt}
               />
               <article className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -30,28 +32,8 @@ export default function ImageGallery() {
             </article >
           ))
         }
-      </section >
-
-      <section className="carousel carousel-center rounded-box lg:flex hidden overflow-hidden">
-        <article className="carousel-item">
-          <img src="/local.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-        <article className="carousel-item">
-          <img src="/corte9.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-        <article className="carousel-item">
-          <img src="/corte3.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-        <article className="carousel-item">
-          <img src="/corte4.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-        <article className="carousel-item">
-          <img src="/corte5.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-        <article className="carousel-item">
-          <img src="/corte6.jpeg" className="w-96" alt="Corte de pelo" />
-        </article>
-      </section>
+      </article >
+    </section>
     </>
   )
 }
