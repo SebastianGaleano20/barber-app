@@ -1,14 +1,6 @@
 export const IMAGES = [
   {
-    "image": "/local.jpeg",
-    "alt": "Corte de pelo"
-  },
-  {
     "image": "/corte2.jpeg",
-    "alt": "Corte de pelo"
-  },
-  {
-    "image": "/corte3.jpeg",
     "alt": "Corte de pelo"
   },
   {
@@ -25,10 +17,6 @@ export const IMAGES = [
   },
   {
     "image": "/corte7.jpeg",
-    "alt": "Corte de pelo"
-  },
-  {
-    "image": "/corte8.jpeg",
     "alt": "Corte de pelo"
   },
   {
