@@ -1,9 +1,5 @@
 export const IMAGES = [
   {
-    "image": "/corte2.jpeg",
-    "alt": "Corte de pelo"
-  },
-  {
     "image": "/corte4.jpeg",
     "alt": "Corte de pelo"
   },

@@ -6,6 +6,7 @@ import Location from "./ui/dashboard/Location"
 import Hours from "./ui/dashboard/Hours"
 import Contact from "./ui/dashboard/Contac"
 import ImageGalleryLg from "./ui/dashboard/ImageGalleryLg"
+import Barbers from "./ui/dashboard/Barbers"
 
 export default function Home() {
   return (
@@ -17,9 +18,10 @@ export default function Home() {
         <ImageGallery />
         <ImageGalleryLg />
         <Services />
+        <Barbers />
         <article className="lg:flex lg:gap-4">
-        <Location />
-        <Contact />
+          <Location />
+          <Contact />
         </article>
       </main>
       <Footer />
