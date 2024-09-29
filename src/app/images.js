@@ -1,6 +1,6 @@
 export const IMAGES = [
   {
-    "image": "/corte1.jpeg",
+    "image": "/local.jpeg",
     "alt": "Corte de pelo"
   },
   {
