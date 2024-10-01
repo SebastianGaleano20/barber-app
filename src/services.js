@@ -8,7 +8,7 @@ export const SERVICES = [
     {
       id: 2,
       name: 'CORTE + BARBA',
-      imageURL: 'corte8.jpeg',
+      imageURL: '/corte8.jpeg',
       description: 'Clásico o moderno más afeitada tradicional o recorte de barba.'
     },
     {

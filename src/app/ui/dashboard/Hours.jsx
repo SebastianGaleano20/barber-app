@@ -1,7 +1,7 @@
 export default function Hours() {
     return (
-        <section className="card bg-slate-600 ring-2 ring-slate-800 m-4 p-6 rounded-lg w-11/12 lg:text-2xl lg:flex lg:justify-center lg:items-center lg:flex-col lg:w-full lg:h-full lg:gap-4 ">
-            <h2 className="text-3xl font-bold text-center mb-4">Horarios</h2>
+        <section className="card bg-slate-600 ring-2 ring-slate-800 m-4 rounded-lg md:h-auto md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-4 lg:flex lg:justify-center lg:items-center">
+            <h2 className="text-3xl font-bold text-center">Horarios</h2>
             <ul className="timeline timeline-vertical lg:timeline-horizontal">
                 <li>
                     <div className="timeline-start">Lunes</div>

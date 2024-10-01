@@ -1,8 +1,12 @@
+import Image from "next/image";
+
 export default function Contact() {
     return (
-        <section className="card bg-base-100 image-full max-w-md lg:w-lg m-3 shadow-xl">
+        <section className="card bg-base-100 image-full max-w-md lg:w-full m-4 shadow-xl lg:row-start-2 lg:col-start-2">
             <figure>
-                <img
+                <Image
+                    width={500}
+                    height={500}
                     src="/ig.jpeg"
                     alt="imageIg" />
             </figure>

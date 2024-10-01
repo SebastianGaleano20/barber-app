@@ -14,14 +14,14 @@ export default function Home() {
       <main
         className="w-full flex flex-col justify-center items-center">
         <Header />
-        <Hours />
         <ImageGallery />
         <ImageGalleryLg />
         <Services />
         <Barbers />
-        <article className="lg:flex lg:gap-4">
+        <article className="w-full grid justify-center gap-4 md:h-auto  md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
           <Location />
           <Contact />
+          <Hours />
         </article>
       </main>
       <Footer />
