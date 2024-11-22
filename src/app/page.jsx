@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="w-full flex flex-col justify-center items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+        className="w-full flex flex-col justify-center items-center bg-white dark:bg-dark text-gray-800 dark:text-gray-100">
         <Header />
         <ImageGallery />
         <ImageGalleryLg />

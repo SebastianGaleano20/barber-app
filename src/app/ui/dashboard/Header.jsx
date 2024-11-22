@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <section className="h-5/6 w-full bg-white dark:bg-gray-900">
+    <section className="h-5/6 w-full bg-white dark:bg-dark">
       <article className='w-full m-0  flex flex-col justify-center items-center text-center '>
         <figure className='m-4'>
           <Image
