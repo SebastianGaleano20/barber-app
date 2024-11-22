@@ -13,7 +13,7 @@ export default function Header() {
             src="/logo.jpeg"
             alt="logo" />
         </figure>
-        <h2 className="lg:text-2xl text-shadow text-white text-xl font-black mb-2">Barbería familiar ubicada en el barrio de Parque Patricios, desde el año 2020 brindando la mejor experiencia.</h2>
+        <h2 className="text-gray-800 dark:text-gray-100 lg:text-2xl text-shadow text-xl font-black mb-2">Barbería familiar ubicada en el barrio de Parque Patricios, desde el año 2020 brindando la mejor experiencia.</h2>
       </article>
     </section>
   )
