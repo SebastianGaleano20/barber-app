@@ -23,8 +23,8 @@ export default function Home() {
           <Contact />
           <Hours />
         </article>
-      </main>
       <Footer />
+      </main>
     </>
   )
 }
