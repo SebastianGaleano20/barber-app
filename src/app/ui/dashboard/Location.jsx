@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Location() {
     return (
-        <section className="card bg-base-100 max-w-md md:h-96 lg:h-auto lg:row-span-2 m-4 overflow-hidden bg-white dark:bg-gray-900">
+        <section className="card  ring-2 ring-slate-800 bg-base-100 max-w-md md:h-96 lg:h-auto lg:row-span-2 m-4 overflow-hidden bg-white dark:bg-gray-900">
                 <figure>
                     <Image
                         width={500}

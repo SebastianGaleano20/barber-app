@@ -7,7 +7,7 @@ export default function Barbers() {
         <>
             <h2 className="text-3xl text-center font-bold m-2">Barberos</h2>
             <section className="grid md:grid-cols-2 lg:grid-cols-3">
-                <article className="card max-w-md bg-base-100 shadow-xl m-4 text-center">
+                <article className="card ring-2 ring-slate-800 max-w-md bg-base-100 shadow-xl m-4 text-center">
                     <figure>
                         <Image
                             width={500}
@@ -28,7 +28,7 @@ export default function Barbers() {
                         </div>
                     </article>
                 </article>
-                <article className="card max-w-md bg-base-100 shadow-xl m-4 text-center">
+                <article className="card ring-2 ring-slate-800 max-w-md bg-base-100 shadow-xl m-4 text-center">
                     <figure>
                         <Image
                             width={500}
@@ -51,7 +51,7 @@ export default function Barbers() {
                         </div>
                     </article>
                 </article>
-                <article className="card max-w-md bg-base-100 shadow-xl m-4 text-center">
+                <article className="card ring-2 ring-slate-800 max-w-md bg-base-100 shadow-xl m-4 text-center">
                     <figure>
                         <Image
                             width={500}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
     return (
-        <section className="card bg-base-100 image-full max-w-md lg:w-full m-4 shadow-xl lg:row-start-2 lg:col-start-2">
+        <section className="card ring-2 ring-slate-800 bg-base-100 image-full max-w-md lg:w-full m-4 shadow-xl lg:row-start-2 lg:col-start-2">
             <figure>
                 <Image
                     width={500}
