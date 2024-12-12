@@ -7,14 +7,10 @@ import Hours from "./ui/dashboard/Hours"
 import Contact from "./ui/dashboard/Contac"
 import ImageGalleryLg from "./ui/dashboard/ImageGalleryLg"
 import Barbers from "./ui/dashboard/Barbers"
-import Head from "next/head"
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Barrio Fino</title>
-      </Head>
       <main
         className="w-full flex flex-col justify-center items-center bg-white dark:bg-dark text-gray-800 dark:text-gray-100">
         <Header />
