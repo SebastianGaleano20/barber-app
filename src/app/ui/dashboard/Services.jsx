@@ -8,7 +8,7 @@ export default function Services() {
       <article className="grid justify-center gap-4 m-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:m-8">
         {
           SERVICES.map(service => (
-            <article className="p-5 text-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:max-w-sm" key={service.id}>
+            <article className=" ring-2 ring-slate-800 p-5 text-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:max-w-sm" key={service.id}>
               <figure>
               <Image 
               width={500}

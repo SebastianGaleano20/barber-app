@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="w-full flex flex-col justify-center items-center">
+        className="w-full flex flex-col justify-center items-center bg-white dark:bg-dark text-gray-800 dark:text-gray-100">
         <Header />
         <ImageGallery />
         <ImageGalleryLg />
@@ -23,8 +23,8 @@ export default function Home() {
           <Contact />
           <Hours />
         </article>
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }

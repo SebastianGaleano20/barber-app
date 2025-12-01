@@ -1,6 +1,6 @@
 export default function Hours() {
     return (
-        <section className="card bg-slate-600 ring-2 ring-slate-800 m-4 rounded-lg md:h-auto md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-4 lg:flex lg:justify-center lg:items-center">
+        <section className="bg-white dark:bg-gray-900 card bg-slate-600 ring-2 ring-slate-800 m-4 rounded-lg md:h-auto md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-4 lg:flex lg:justify-center lg:items-center">
             <h2 className="text-3xl font-bold text-center">Horarios</h2>
             <ul className="timeline timeline-vertical lg:timeline-horizontal">
                 <li>
@@ -17,7 +17,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">Cerrado</div>
+                    <div className="timeline-end timeline-box text-gray-100">Cerrado</div>
                     <hr />
                 </li>
                 <li>
@@ -35,7 +35,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">12hs a 19hs</div>
+                    <div className="timeline-end timeline-box text-gray-100">12hs a 19hs</div>
                     <hr />
                 </li>
                 <li>
@@ -53,7 +53,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">12hs a 19hs</div>
+                    <div className="timeline-end timeline-box text-gray-100">12hs a 19hs</div>
                     <hr />
                 </li>
                 <li>
@@ -71,7 +71,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">12hs a 19hs</div>
+                    <div className="timeline-end timeline-box text-gray-100">12hs a 19hs</div>
                     <hr />
                 </li>
                 <li>
@@ -89,7 +89,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">11hs a 20hs</div>
+                    <div className="timeline-end timeline-box text-gray-100">11hs a 20hs</div>
                     <hr />
                 </li>
                 <li>
@@ -107,7 +107,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">11hs a 20hs</div>
+                    <div className="timeline-end timeline-box text-gray-100">11hs a 20hs</div>
                     <hr />
                 </li>
                 <li>
@@ -125,7 +125,7 @@ export default function Hours() {
                                 clipRule="evenodd" />
                         </svg>
                     </div>
-                    <div className="timeline-end timeline-box">Cerrado</div>
+                    <div className="timeline-end timeline-box text-gray-100">Cerrado</div>
                 </li>
             </ul>
         </section>

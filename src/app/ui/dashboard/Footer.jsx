@@ -5,9 +5,9 @@ export default function Footer() {
         <article className="sm:flex sm:items-center sm:justify-around">
             <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/logo.jpeg" className="h-8" alt="Logobarber" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Barrio Fino</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-800 dark:text-gray-100">Barrio Fino</span>
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 text-gray-800 dark:text-gray-100">
                 <li>
                     <a target="_blank" href="https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3" className="hover:underline me-4 md:me-6">Instagram</a>
                 </li>
@@ -17,7 +17,7 @@ export default function Footer() {
             </ul>   
         </article>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a target="_blank" href="https://sebastiang.netlify.app/" className="hover:underline">DraCode</a>. All Rights Reserved.</span>
+        <span className="block text-sm sm:text-center text-gray-800 dark:text-gray-100">© 2024 <a target="_blank" href="https://sebastiang.netlify.app/" className="hover:underline text-gray-800 dark:text-gray-100">DraCode</a>. All Rights Reserved.</span>
     </section>
 </footer>
   )
