@@ -1,4 +1,10 @@
+'use client'
+import { useState } from "react";
+import ExternalLinkModal from "../../ui/ExternalLinkModal";
+
 export default function Footer() {
+  const [pendingLink, setPendingLink] = useState(null);
+
   return (
     <footer className="w-full bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-2">
       <div className="max-w-screen-xl mx-auto px-4 py-8 md:py-10">
@@ -18,24 +24,20 @@ export default function Footer() {
           {/* Social links */}
           <ul className="flex items-center gap-4 text-sm font-medium">
             <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3"
+              <button
+                onClick={() => setPendingLink({ href: "https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3", platformName: "Instagram" })}
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 Instagram
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://wa.me/+5491123835826?text=Hola-tengo-una-consulta"
+              <button
+                onClick={() => setPendingLink({ href: "https://wa.me/+5491123835826?text=Hola-tengo-una-consulta", platformName: "WhatsApp" })}
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 WhatsApp
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -55,6 +57,15 @@ export default function Footer() {
           . All Rights Reserved.
         </p>
       </div>
+
+      {/* Modal confirmación link externo */}
+      {pendingLink && (
+        <ExternalLinkModal
+          href={pendingLink.href}
+          platformName={pendingLink.platformName}
+          onClose={() => setPendingLink(null)}
+        />
+      )}
     </footer>
   )
 }

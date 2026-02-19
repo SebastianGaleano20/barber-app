@@ -1,5 +1,8 @@
+'use client'
+import { useState } from "react";
 import Image from "next/image";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import ExternalLinkModal from "../../ui/ExternalLinkModal";
 
 const BARBERS = [
   {
@@ -26,6 +29,8 @@ const BARBERS = [
 ];
 
 export default function Barbers() {
+  const [pendingLink, setPendingLink] = useState(null);
+
   return (
     <section className="w-full py-10 px-4 md:px-6 lg:px-8">
       <h2 className="section-title text-2xl sm:text-3xl text-center font-bold mb-8 text-gray-800 dark:text-gray-100">
@@ -55,29 +60,34 @@ export default function Barbers() {
                 {barber.bio}
               </p>
               <div className="flex gap-3 justify-center flex-wrap">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={barber.instagram}
+                <button
+                  onClick={() => setPendingLink({ href: barber.instagram, platformName: "Instagram" })}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full btn-gradient text-white transition-all duration-200 text-sm font-semibold hover:scale-105 hover:opacity-90"
                 >
                   <FaInstagram className="text-base" />
                   Ver Perfil
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={barber.whatsapp}
+                </button>
+                <button
+                  onClick={() => setPendingLink({ href: barber.whatsapp, platformName: "WhatsApp" })}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full btn-gradient text-white transition-all duration-200 text-sm font-semibold hover:scale-105 hover:opacity-90"
                 >
                   <FaWhatsapp className="text-base" />
                   Solicitar turno
-                </a>
+                </button>
               </div>
             </div>
           </article>
         ))}
       </div>
+
+      {/* Modal confirmación link externo */}
+      {pendingLink && (
+        <ExternalLinkModal
+          href={pendingLink.href}
+          platformName={pendingLink.platformName}
+          onClose={() => setPendingLink(null)}
+        />
+      )}
     </section>
   );
 }

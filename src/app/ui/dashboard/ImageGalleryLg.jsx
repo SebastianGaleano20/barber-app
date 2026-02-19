@@ -1,12 +1,19 @@
+'use client'
+import { useState } from "react";
+import ImageModal from "../ImageModal";
+import { ZoomIn } from "lucide-react";
+
+const galleryImages = [
+  { src: "/local.jpeg", alt: "Local Barrio Fino" },
+  { src: "/corte9.jpeg", alt: "Corte de pelo" },
+  { src: "/corte3.jpeg", alt: "Corte de pelo" },
+  { src: "/corte4.jpeg", alt: "Corte de pelo" },
+  { src: "/corte5.jpeg", alt: "Corte de pelo" },
+  { src: "/corte6.jpeg", alt: "Corte de pelo" },
+];
+
 export default function ImageGalleryLg() {
-  const galleryImages = [
-    { src: "/local.jpeg", alt: "Local Barrio Fino" },
-    { src: "/corte9.jpeg", alt: "Corte de pelo" },
-    { src: "/corte3.jpeg", alt: "Corte de pelo" },
-    { src: "/corte4.jpeg", alt: "Corte de pelo" },
-    { src: "/corte5.jpeg", alt: "Corte de pelo" },
-    { src: "/corte6.jpeg", alt: "Corte de pelo" },
-  ];
+  const [modalImage, setModalImage] = useState(null);
 
   return (
     <section className="w-full hidden lg:block py-6 animate-fade-in">
@@ -15,9 +22,11 @@ export default function ImageGalleryLg() {
       </h2>
       <div className="carousel carousel-center w-full gap-3 px-6 overflow-x-auto pb-2">
         {galleryImages.map((img, index) => (
-          <article
+          <button
             key={index}
-            className="carousel-item group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-blue-500/60 dark:hover:ring-blue-400/60"
+            className="carousel-item group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-blue-500/60 dark:hover:ring-blue-400/60 cursor-zoom-in"
+            onClick={() => setModalImage(img)}
+            aria-label={`Ver ${img.alt} en grande`}
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <img
@@ -25,11 +34,22 @@ export default function ImageGalleryLg() {
               className="w-80 h-72 object-cover"
               alt={img.alt}
             />
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </article>
+            {/* Hover overlay con ícono zoom */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <ZoomIn className="text-white h-10 w-10 drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </button>
         ))}
       </div>
+
+      {/* Modal imagen */}
+      {modalImage && (
+        <ImageModal
+          src={modalImage.src}
+          alt={modalImage.alt}
+          onClose={() => setModalImage(null)}
+        />
+      )}
     </section>
   );
 }
