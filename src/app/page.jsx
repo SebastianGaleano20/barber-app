@@ -17,7 +17,7 @@ export default function Home() {
         <ImageGalleryLg />
         <Services />
         <Barbers />
-        <article className="w-full grid justify-center gap-4 px-4 md:px-6 lg:px-8 pb-8 md:h-auto md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
+        <article className="w-full grid gap-6 px-4 md:px-8 lg:px-12 pb-10 md:grid-cols-2 lg:grid-cols-3 items-start max-w-7xl mx-auto">
           <Location />
           <Contact />
           <Hours />

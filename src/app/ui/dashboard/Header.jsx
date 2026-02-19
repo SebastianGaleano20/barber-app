@@ -5,13 +5,13 @@ export default function Header() {
     <section className="w-full bg-gray-50 dark:bg-dark overflow-hidden">
       <article className="w-full flex flex-col justify-center items-center text-center px-4 py-10 md:py-14 lg:py-16">
 
-        {/* Logo con animacion flotante */}
+        {/* Logo completo con animacion flotante */}
         <figure className="mb-6 animate-float">
           <Image
-            width={180}
-            height={180}
-            className="rounded-full shadow-2xl ring-4 ring-amber-400 dark:ring-amber-500 object-cover"
-            style={{ width: '180px', height: '180px' }}
+            width={320}
+            height={320}
+            className="w-56 sm:w-64 lg:w-80 shadow-2xl"
+            style={{ height: 'auto' }}
             src="/logo.jpeg"
             alt="Barrio Fino logo"
             priority
@@ -19,7 +19,7 @@ export default function Header() {
         </figure>
 
         {/* Nombre de la marca */}
-        <h1 className="section-title gradient-text-amber text-4xl sm:text-5xl lg:text-6xl font-black mb-4 animate-fade-in tracking-tight">
+        <h1 className="section-title gradient-text text-4xl sm:text-5xl lg:text-6xl font-black mb-4 animate-fade-in tracking-tight">
           Barrio Fino
         </h1>
 
@@ -34,7 +34,7 @@ export default function Header() {
             href="https://wa.me/+5491123835826?text=Hola%20quiero%20solicitar%20un%20turno%20porfavor"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 animate-glow-pulse text-base sm:text-lg"
+            className="inline-flex items-center gap-2 btn-gradient text-white font-bold px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 animate-glow-pulse text-base sm:text-lg"
           >
             Reservar Turno
           </a>
@@ -43,7 +43,8 @@ export default function Header() {
       </article>
 
       {/* Separador decorativo */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
     </section>
   )
 }
+
