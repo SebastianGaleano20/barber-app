@@ -42,7 +42,7 @@ export default function Barbers() {
               <Image
                 width={400}
                 height={480}
-                className="w-full h-72 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 src={barber.photo}
                 alt={barber.name}
               />
@@ -59,7 +59,7 @@ export default function Barbers() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={barber.instagram}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white transition-all duration-200 text-sm font-semibold hover:scale-105"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full btn-gradient text-white transition-all duration-200 text-sm font-semibold hover:scale-105 hover:opacity-90"
                 >
                   <FaInstagram className="text-base" />
                   Ver Perfil
@@ -68,7 +68,7 @@ export default function Barbers() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={barber.whatsapp}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white transition-all duration-200 text-sm font-semibold hover:scale-105"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full btn-gradient text-white transition-all duration-200 text-sm font-semibold hover:scale-105 hover:opacity-90"
                 >
                   <FaWhatsapp className="text-base" />
                   Solicitar turno

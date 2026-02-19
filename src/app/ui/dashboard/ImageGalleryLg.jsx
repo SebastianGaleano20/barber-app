@@ -17,12 +17,12 @@ export default function ImageGalleryLg() {
         {galleryImages.map((img, index) => (
           <article
             key={index}
-            className="carousel-item group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-amber-400/60 dark:hover:ring-amber-500/60"
+            className="carousel-item group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-blue-500/60 dark:hover:ring-blue-400/60"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <img
               src={img.src}
-              className="w-72 h-64 object-cover"
+              className="w-80 h-72 object-cover"
               alt={img.alt}
             />
             {/* Hover overlay */}

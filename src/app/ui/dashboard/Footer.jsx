@@ -7,10 +7,10 @@ export default function Footer() {
           <a href="#" className="flex items-center gap-3 group">
             <img
               src="/logo.jpeg"
-              className="h-9 w-9 rounded-full ring-2 ring-amber-400 object-cover transition-transform duration-200 group-hover:scale-110"
+              className="h-9 w-auto transition-transform duration-200 group-hover:scale-110"
               alt="Barrio Fino logo"
             />
-            <span className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors">
+            <span className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               Barrio Fino
             </span>
           </a>
@@ -22,7 +22,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3"
-                className="text-gray-600 dark:text-gray-400 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200"
+                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 Instagram
               </a>
@@ -32,7 +32,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://wa.me/+5491123835826?text=Hola-tengo-una-consulta"
-                className="text-gray-600 dark:text-gray-400 hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-200"
+                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 WhatsApp
               </a>
@@ -40,7 +40,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent my-6" />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent my-6" />
 
         <p className="text-xs sm:text-sm text-center text-gray-400 dark:text-gray-500">
           © 2024{" "}
@@ -48,7 +48,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://sebastiang.netlify.app/"
-            className="text-amber-500 hover:text-amber-400 transition-colors"
+            className="text-blue-600 hover:text-blue-500 transition-colors"
           >
             DraCode
           </a>

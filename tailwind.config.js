@@ -41,8 +41,8 @@ module.exports = {
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 8px rgba(245, 158, 11, 0.4)' },
-          '50%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.8), 0 0 40px rgba(245, 158, 11, 0.3)' },
+          '0%, 100%': { boxShadow: '0 0 8px rgba(37, 99, 235, 0.4)' },
+          '50%': { boxShadow: '0 0 20px rgba(37, 99, 235, 0.7), 0 0 40px rgba(220, 38, 38, 0.3)' },
         },
       },
     },

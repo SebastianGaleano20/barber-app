@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Location() {
   return (
-    <section className="group card-hover-lift w-full max-w-md mx-auto lg:row-span-2 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-md overflow-hidden animate-fade-in-up">
+    <section className="group card-hover-lift w-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-md overflow-hidden animate-fade-in-up">
       <figure className="overflow-hidden">
         <Image
           width={500}
           height={300}
-          className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
           src="/local.jpeg"
           alt="Local Barrio Fino"
         />
@@ -23,7 +23,7 @@ export default function Location() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://maps.app.goo.gl/CyysiyPupd8qPUur8"
-          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 text-sm"
+          className="inline-flex items-center gap-2 btn-gradient text-white font-semibold px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 text-sm"
         >
           Ver en mapa
         </a>

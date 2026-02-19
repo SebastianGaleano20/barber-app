@@ -14,7 +14,7 @@ export default function ImageGallery() {
       <h2 className="section-title text-2xl sm:text-3xl text-center font-bold mb-6 text-gray-800 dark:text-gray-100">
         Nuestros Trabajos
       </h2>
-      <div className="max-w-sm sm:max-w-md mx-auto ring-2 ring-amber-400/30 dark:ring-amber-500/30 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden">
+      <div className="max-w-sm sm:max-w-md mx-auto ring-2 ring-blue-500/30 dark:ring-blue-400/30 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden">
         <article className="carousel w-full">
           {images.map((image, index) => (
             <article
@@ -24,7 +24,7 @@ export default function ImageGallery() {
             >
               <img
                 src={image.image}
-                className="w-full h-72 sm:h-80 object-cover"
+                className="w-full h-80 sm:h-96 object-cover"
                 alt={image.alt}
               />
               <article className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -49,7 +49,7 @@ export default function ImageGallery() {
             <a
               key={index}
               href={`#slide${index + 1}`}
-              className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-amber-400 dark:hover:bg-amber-400 transition-colors"
+              className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors"
             />
           ))}
         </div>

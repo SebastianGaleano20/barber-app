@@ -18,7 +18,7 @@ export default function Services() {
               <Image
                 width={500}
                 height={300}
-                className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 src={service.imageURL}
                 alt={service.name}
               />

@@ -14,23 +14,32 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Section accent underline */
+/* Section accent underline (blue → red) */
 .section-title::after {
   content: '';
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  background: linear-gradient(90deg, #2563eb, #dc2626);
   border-radius: 9999px;
   margin: 10px auto 0;
 }
 
-/* Gradient text (amber theme) */
-.gradient-text-amber {
-  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+/* Gradient text blue → red */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #dc2626 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Gradient button blue → red */
+.btn-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #dc2626 100%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.btn-gradient:hover {
+  opacity: 0.88;
 }
 
 /* Card glass effect for dark mode */
@@ -112,14 +121,14 @@ body {
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f59e0b;
+  background: #2563eb;
   border-radius: 3px;
 }
 .dark ::-webkit-scrollbar-track {
   background: #1f2937;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #f59e0b;
+  background: #2563eb;
 }
 
 /* ============================================
