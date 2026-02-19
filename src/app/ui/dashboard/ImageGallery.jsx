@@ -8,32 +8,52 @@ export default function ImageGallery() {
   useEffect(() => {
     setImages(IMAGES);
   }, []);
+
   return (
-    <>
-      <h2 className="text-3xl text-center font-bold m-4">Nuestros trabajos</h2>
-      <section className=" ring-2 ring-slate-800 m-4 p-5 max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:hidden ">
+    <section className="w-full px-4 py-6 lg:hidden animate-fade-in">
+      <h2 className="section-title text-2xl sm:text-3xl text-center font-bold mb-6 text-gray-800 dark:text-gray-100">
+        Nuestros Trabajos
+      </h2>
+      <div className="max-w-sm sm:max-w-md mx-auto ring-2 ring-amber-400/30 dark:ring-amber-500/30 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden">
         <article className="carousel w-full">
-          {
-            images.map((image, index) => (
-              <article key={index} id={`slide${index + 1}`} className="carousel-item relative w-full">
-                <img
-                  src={image.image}
-                  className="object-scale-down rounded-t-lg w-full"
-                  alt={image.alt}
-                />
-                <article className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                  <a
-                    href={`#slide${index === 0 ? images.length : index}`}
-                    className="btn btn-circle">❮</a>
-                  <a
-                    href={`#slide${index === images.length - 1 ? 1 : index + 2}`}
-                    className="btn btn-circle">❯</a>
-                </article>
-              </article >
-            ))
-          }
-        </article >
-      </section>
-    </>
+          {images.map((image, index) => (
+            <article
+              key={index}
+              id={`slide${index + 1}`}
+              className="carousel-item relative w-full"
+            >
+              <img
+                src={image.image}
+                className="w-full h-72 sm:h-80 object-cover"
+                alt={image.alt}
+              />
+              <article className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a
+                  href={`#slide${index === 0 ? images.length : index}`}
+                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white"
+                >
+                  ❮
+                </a>
+                <a
+                  href={`#slide${index === images.length - 1 ? 1 : index + 2}`}
+                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white"
+                >
+                  ❯
+                </a>
+              </article>
+            </article>
+          ))}
+        </article>
+        <div className="flex justify-center gap-2 py-3 bg-gray-50 dark:bg-gray-800/80">
+          {images.map((_, index) => (
+            <a
+              key={index}
+              href={`#slide${index + 1}`}
+              className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-amber-400 dark:hover:bg-amber-400 transition-colors"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }

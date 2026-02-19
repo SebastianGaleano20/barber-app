@@ -3,26 +3,37 @@ import { SERVICES } from "../../../services.js"
 
 export default function Services() {
   return (
-    <section>
-      <h2 className="text-3xl text-center font-bold m-2">Servicios</h2>
-      <article className="grid justify-center gap-4 m-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:m-8">
-        {
-          SERVICES.map(service => (
-            <article className=" ring-2 ring-slate-800 p-5 text-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 lg:max-w-sm" key={service.id}>
-              <figure>
-              <Image 
-              width={500}
-              height={500}
-              className="rounded-t-lg w-full"
-              src={service.imageURL} 
-              alt="img" />
-              </figure>
-              <h2 className="text-2xl p-5">{service.name}</h2>
-              <p className="mb-3 text-2lg font-normal text-gray-700 dark:text-gray-400">{service.description}</p>
-            </article>
-          ))
-        }
-      </article >
+    <section className="w-full py-10 px-4 md:px-6 lg:px-8">
+      <h2 className="section-title text-2xl sm:text-3xl text-center font-bold mb-8 text-gray-800 dark:text-gray-100">
+        Servicios
+      </h2>
+      <article className="grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        {SERVICES.map((service, index) => (
+          <article
+            key={service.id}
+            className="group card-hover-lift bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-md overflow-hidden animate-fade-in-up"
+            style={{ animationDelay: `${index * 150}ms` }}
+          >
+            <figure className="overflow-hidden">
+              <Image
+                width={500}
+                height={300}
+                className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
+                src={service.imageURL}
+                alt={service.name}
+              />
+            </figure>
+            <div className="p-5 text-center">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2 tracking-wide">
+                {service.name}
+              </h3>
+              <p className="text-sm font-normal text-gray-500 dark:text-gray-400 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </article>
     </section>
   )
 }
