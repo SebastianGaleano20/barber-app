@@ -2,33 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   CUSTOM UTILITIES & EFFECTS
+   ============================================ */
+
 .text-shadow {
   text-shadow: 2px 2px 10px rgba(134, 133, 133, 0.959);
 }
 
+.text-shadow-dark {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Section accent underline */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  border-radius: 9999px;
+  margin: 10px auto 0;
+}
+
+/* Gradient text (amber theme) */
+.gradient-text-amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card glass effect for dark mode */
+.card-glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   SMOOTH SCROLL
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   COLOR VARIABLES
+   ============================================ */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 31, 41, 55;
+  --background-rgb: 249, 250, 251;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* ============================================
+   BASE STYLES
+   ============================================ */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-rgb));
 }
 
+/* ============================================
+   TAILWIND LAYER UTILITIES
+   ============================================ */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Image utilities */
+  .img-cover-card {
+    @apply w-full object-cover;
+  }
+
+  /* Hover card effect */
+  .card-hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  .card-hover-lift:hover {
+    @apply -translate-y-1 shadow-2xl;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+}
+
+/* ============================================
+   DAISYUI OVERRIDES & DARK MODE FIXES
+   ============================================ */
+.dark .bg-base-100 {
+  background-color: #1f2937;
+}
+
+.dark .card {
+  background-color: #1f2937;
+}
+
+/* Timeline dark mode text */
+.dark .timeline-box {
+  background-color: #374151;
+  color: #f9fafb;
+  border-color: #4b5563;
 }

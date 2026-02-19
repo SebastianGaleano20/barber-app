@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <title>Barrio Fino</title>
         <meta name="title" content="Barrio fino"></meta>
       </Head>
-      <body className={`${inter.className} bg-white dark:bg-black transition-colors duration-300`}>
+      <body className={`${inter.className} bg-gray-50 dark:bg-dark transition-colors duration-300`}>
         <Providers>
           <ThemeToggle />
           {children}

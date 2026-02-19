@@ -11,14 +11,13 @@ import Barbers from "./ui/dashboard/Barbers"
 export default function Home() {
   return (
     <>
-      <main
-        className="w-full flex flex-col justify-center items-center bg-white dark:bg-dark text-gray-800 dark:text-gray-100">
+      <main className="w-full flex flex-col justify-center items-center bg-gray-50 dark:bg-dark text-gray-800 dark:text-gray-100">
         <Header />
         <ImageGallery />
         <ImageGalleryLg />
         <Services />
         <Barbers />
-        <article className="w-full grid justify-center gap-4 md:h-auto  md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
+        <article className="w-full grid justify-center gap-4 px-4 md:px-6 lg:px-8 pb-8 md:h-auto md:grid-cols-2 lg:grid-cols-3 lg:grid-row-2">
           <Location />
           <Contact />
           <Hours />
