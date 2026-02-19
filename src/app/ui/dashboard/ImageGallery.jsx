@@ -1,9 +1,12 @@
 'use client'
 import { IMAGES } from "../../images.js"
 import { useState, useEffect } from "react";
+import ImageModal from "../ImageModal";
+import { ZoomIn } from "lucide-react";
 
 export default function ImageGallery() {
   const [images, setImages] = useState([]);
+  const [modalImage, setModalImage] = useState(null);
 
   useEffect(() => {
     setImages(IMAGES);
@@ -22,21 +25,36 @@ export default function ImageGallery() {
               id={`slide${index + 1}`}
               className="carousel-item relative w-full"
             >
-              <img
-                src={image.image}
-                className="w-full h-80 sm:h-96 object-cover"
-                alt={image.alt}
-              />
-              <article className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 transform justify-between">
+              {/* Imagen clickeable para abrir modal */}
+              <button
+                className="w-full cursor-zoom-in group relative"
+                onClick={() => setModalImage(image)}
+                aria-label="Ver imagen ampliada"
+              >
+                <img
+                  src={image.image}
+                  className="w-full h-80 sm:h-96 object-cover"
+                  alt={image.alt}
+                />
+                {/* Overlay con ícono zoom al hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+                  <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 h-10 w-10 drop-shadow-lg" />
+                </div>
+              </button>
+
+              {/* Navegación del carrusel */}
+              <article className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 transform justify-between pointer-events-none">
                 <a
                   href={`#slide${index === 0 ? images.length : index}`}
-                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white"
+                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white pointer-events-auto"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   ❮
                 </a>
                 <a
                   href={`#slide${index === images.length - 1 ? 1 : index + 2}`}
-                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white"
+                  className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white pointer-events-auto"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   ❯
                 </a>
@@ -54,6 +72,15 @@ export default function ImageGallery() {
           ))}
         </div>
       </div>
+
+      {/* Modal imagen */}
+      {modalImage && (
+        <ImageModal
+          src={modalImage.image}
+          alt={modalImage.alt}
+          onClose={() => setModalImage(null)}
+        />
+      )}
     </section>
   )
 }
