@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import ExternalLinkModal from "@/components/ui/ExternalLinkModal";
 
@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <a href="#" className="flex items-center gap-3 group">
             <img
-              src="/logo.jpeg"
+              src="/assets/logo.jpeg"
               className="h-9 w-auto transition-transform duration-200 group-hover:scale-110"
               alt="Barrio Fino logo"
             />
@@ -25,7 +25,12 @@ export default function Footer() {
           <ul className="flex items-center gap-4 text-sm font-medium">
             <li>
               <button
-                onClick={() => setPendingLink({ href: "https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3", platformName: "Instagram" })}
+                onClick={() =>
+                  setPendingLink({
+                    href: "https://www.instagram.com/barriofino_barberia?igsh=N3Jmc3JxNmRyODF3",
+                    platformName: "Instagram",
+                  })
+                }
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 Instagram
@@ -33,7 +38,12 @@ export default function Footer() {
             </li>
             <li>
               <button
-                onClick={() => setPendingLink({ href: "https://wa.me/+5491123835826?text=Hola-tengo-una-consulta", platformName: "WhatsApp" })}
+                onClick={() =>
+                  setPendingLink({
+                    href: "https://wa.me/+5491123835826?text=Hola-tengo-una-consulta",
+                    platformName: "WhatsApp",
+                  })
+                }
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               >
                 WhatsApp
@@ -67,5 +77,5 @@ export default function Footer() {
         />
       )}
     </footer>
-  )
+  );
 }
