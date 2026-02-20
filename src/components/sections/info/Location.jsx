@@ -8,7 +8,7 @@ export default function Location() {
           width={500}
           height={300}
           className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-          src="/local.jpeg"
+          src="/assets/local.jpeg"
           alt="Local Barrio Fino"
         />
       </figure>
@@ -29,5 +29,5 @@ export default function Location() {
         </a>
       </div>
     </section>
-  )
+  );
 }

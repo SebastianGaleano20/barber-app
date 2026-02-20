@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import ExternalLinkModal from "@/components/ui/ExternalLinkModal";
@@ -16,7 +16,7 @@ export default function Contact() {
           width={500}
           height={350}
           className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-          src="/ig.jpeg"
+          src="/assets/ig.jpeg"
           alt="Instagram Barrio Fino"
         />
         {/* Gradient overlay */}
@@ -48,5 +48,5 @@ export default function Contact() {
         />
       )}
     </section>
-  )
+  );
 }
