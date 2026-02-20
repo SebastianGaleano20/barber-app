@@ -10,7 +10,7 @@ export default function Header() {
           <Image
             width={320}
             height={320}
-            className="w-56 sm:w-64 lg:w-80 shadow-2xl"
+            className="w-56 sm:w-64 lg:w-80"
             style={{ height: 'auto' }}
             src="/logo.jpeg"
             alt="Barrio Fino logo"

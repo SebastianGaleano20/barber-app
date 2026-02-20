@@ -50,7 +50,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://sebastiang.netlify.app/"
-            className="text-blue-600 hover:text-blue-500 transition-colors"
+            className="text-lime-400 hover:text-lime-300 transition-colors font-bold"
           >
             DraCode
           </a>
