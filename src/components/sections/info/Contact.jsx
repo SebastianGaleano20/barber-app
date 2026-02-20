@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import Image from "next/image";
-import ExternalLinkModal from "../../ui/ExternalLinkModal";
+import ExternalLinkModal from "@/components/ui/ExternalLinkModal";
 
 const IG_URL = "https://www.instagram.com/barriofino_barberia/reels/?__d=1%2F";
 

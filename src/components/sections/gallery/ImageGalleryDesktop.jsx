@@ -1,18 +1,10 @@
 'use client'
 import { useState } from "react";
-import ImageModal from "../ImageModal";
+import { DESKTOP_GALLERY } from "@/data/gallery";
+import ImageModal from "@/components/ui/ImageModal";
 import { ZoomIn } from "lucide-react";
 
-const galleryImages = [
-  { src: "/local.jpeg", alt: "Local Barrio Fino" },
-  { src: "/corte9.jpeg", alt: "Corte de pelo" },
-  { src: "/corte3.jpeg", alt: "Corte de pelo" },
-  { src: "/corte4.jpeg", alt: "Corte de pelo" },
-  { src: "/corte5.jpeg", alt: "Corte de pelo" },
-  { src: "/corte6.jpeg", alt: "Corte de pelo" },
-];
-
-export default function ImageGalleryLg() {
+export default function ImageGalleryDesktop() {
   const [modalImage, setModalImage] = useState(null);
 
   return (
@@ -21,7 +13,7 @@ export default function ImageGalleryLg() {
         Nuestros Trabajos
       </h2>
       <div className="carousel carousel-center w-full gap-3 px-6 overflow-x-auto pb-2">
-        {galleryImages.map((img, index) => (
+        {DESKTOP_GALLERY.map((img, index) => (
           <button
             key={index}
             className="carousel-item group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:ring-blue-500/60 dark:hover:ring-blue-400/60 cursor-zoom-in"

@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import ExternalLinkModal from "../../ui/ExternalLinkModal";
+import ExternalLinkModal from "@/components/ui/ExternalLinkModal";
 
 export default function Footer() {
   const [pendingLink, setPendingLink] = useState(null);
