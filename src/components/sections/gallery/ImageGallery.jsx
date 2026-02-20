@@ -1,16 +1,11 @@
 'use client'
-import { IMAGES } from "../../images.js"
-import { useState, useEffect } from "react";
-import ImageModal from "../ImageModal";
+import { useState } from "react";
+import { GALLERY_IMAGES } from "@/data/gallery";
+import ImageModal from "@/components/ui/ImageModal";
 import { ZoomIn } from "lucide-react";
 
 export default function ImageGallery() {
-  const [images, setImages] = useState([]);
   const [modalImage, setModalImage] = useState(null);
-
-  useEffect(() => {
-    setImages(IMAGES);
-  }, []);
 
   return (
     <section className="w-full px-4 py-6 lg:hidden animate-fade-in">
@@ -19,7 +14,7 @@ export default function ImageGallery() {
       </h2>
       <div className="max-w-sm sm:max-w-md mx-auto ring-2 ring-blue-500/30 dark:ring-blue-400/30 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden">
         <article className="carousel w-full">
-          {images.map((image, index) => (
+          {GALLERY_IMAGES.map((image, index) => (
             <article
               key={index}
               id={`slide${index + 1}`}
@@ -45,14 +40,14 @@ export default function ImageGallery() {
               {/* Navegación del carrusel */}
               <article className="absolute left-4 right-4 top-1/2 flex -translate-y-1/2 transform justify-between pointer-events-none">
                 <a
-                  href={`#slide${index === 0 ? images.length : index}`}
+                  href={`#slide${index === 0 ? GALLERY_IMAGES.length : index}`}
                   className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
                   ❮
                 </a>
                 <a
-                  href={`#slide${index === images.length - 1 ? 1 : index + 2}`}
+                  href={`#slide${index === GALLERY_IMAGES.length - 1 ? 1 : index + 2}`}
                   className="btn btn-circle btn-sm bg-black/40 hover:bg-black/60 border-none text-white pointer-events-auto"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -63,7 +58,7 @@ export default function ImageGallery() {
           ))}
         </article>
         <div className="flex justify-center gap-2 py-3 bg-gray-50 dark:bg-gray-800/80">
-          {images.map((_, index) => (
+          {GALLERY_IMAGES.map((_, index) => (
             <a
               key={index}
               href={`#slide${index + 1}`}

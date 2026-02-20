@@ -1,7 +1,7 @@
 import { Barlow } from "next/font/google";
-import "@/app/ui/globals.css";
+import "@/styles/globals.css";
 import { Providers } from "./providers";
-import { ThemeToggle } from "./ui/thoggle-theme";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import Head from "next/head"
 
 const inter = Barlow({ subsets: ["latin"], weight: ["400", "700"] });

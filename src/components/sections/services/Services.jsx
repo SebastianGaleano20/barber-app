@@ -1,5 +1,5 @@
-import Image from "next/image.js"
-import { SERVICES } from "../../../services.js"
+import Image from "next/image"
+import { SERVICES } from "@/data/services"
 
 export default function Services() {
   return (
